@@ -3,8 +3,8 @@ module DeviseTokenAuth::Concerns::SetUserByToken
   include DeviseTokenAuth::Controllers::Helpers
 
   included do
-    before_action :set_request_start
-    after_action :update_auth_header
+    before_filter :set_request_start
+    after_filter :update_auth_header
   end
 
   # keep track of request duration
