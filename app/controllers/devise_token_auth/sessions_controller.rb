@@ -91,7 +91,7 @@ module DeviseTokenAuth
     end
 
     def resource_params
-      params.permit(devise_parameter_sanitizer.for(:sign_in))
+      params.permit(*devise_parameter_sanitizer.for(:sign_in))
     end
 
     def get_auth_params

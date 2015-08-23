@@ -132,11 +132,11 @@ module DeviseTokenAuth
     end
 
     def sign_up_params
-      params.permit(devise_parameter_sanitizer.for(:sign_up))
+      params.permit(*devise_parameter_sanitizer.for(:sign_up))
     end
 
     def account_update_params
-      params.permit(devise_parameter_sanitizer.for(:account_update))
+      params.permit(*devise_parameter_sanitizer.for(:account_update))
     end
 
     private
