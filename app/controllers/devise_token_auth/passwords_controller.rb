@@ -174,7 +174,7 @@ module DeviseTokenAuth
     end
 
     def password_resource_params
-      params.permit(devise_parameter_sanitizer.for(:account_update))
+      params.permit(*devise_parameter_sanitizer.for(:account_update))
     end
 
     def resource_params
